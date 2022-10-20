@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>odisha tourism</title>
+</head>
+
+<body background="Odisha.jpg">
+        <br><br><br><br><br><br><br>
+<b><i><table align="center" cellpadding="20" cellspacing="20" border="12" bgcolor="#00FFCC" >
+<form>
+    <tr><td> First Name</td>   
+        <td><input type="text" placeholder="Enter your name" id="n1" required></td></tr>  
+        <tr><td> Last Name</td>   
+        <td><input type="text" placeholder="Enter your name" id="n2" required></td></tr>  
+        <tr><td>Email </td>  
+        <td><input type="text" placeholder="Enter your email id" id="e1" required ></td></tr>  
+        <tr><td> Set Password</td>  
+        <td><input type="password" placeholder="Set a password" id="p1" required></td></tr>  
+        <tr><td>Confirm Password</td>  
+        <td><input type="password" placeholder="Confirm your password" id="p2" required></td></tr>  
+        <tr><td>  
+        <input type="submit" value="submit" onClick="create_account()"/>  
+        </table>  
+        <script type="text/javascript">  
+        function create_account(){  
+        var n=document.getElementById("n1").value;  
+        var n=document.getElementById("n2").value;
+        var e=document.getElementById("e1").value;  
+        var p=document.getElementById("p1").value;  
+        var cp=document.getElementById("p2").value;  
+        //Code for password validation  
+                var letters = /^[A-Za-z]+$/;  
+                var email_val = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;  
+        //Other validations required code  
+        if(n==''||e==''||p==''||cp==''){  
+        alert("Please enter all details");  
+        }  
+        else if(!letters.test(n))  
+                {  
+                    alert('Name is incorrect must contain alphabets only');  
+                }  
+        else if (!email_val.test(e))  
+                {  
+                    alert('Invalid email format please enter valid email id');  
+                }  
+        else if(p!=cp)  
+        {  
+        alert("Passwords not matching");
+        }  
+        else if(document.getElementById("p1").value.length > 12)  
+        {  
+        alert("Password maximum length is 12");  
+        }  
+        else if(document.getElementById("p1").value.length < 6)  
+        {  
+        alert("Password minimum length is 6");  
+        }  
+        else{  
+        alert("Your account has been created successfully..");
+        }  
+        }  
+        </script>  
+
+</form></table></i></b>
+</body>
+</html>
